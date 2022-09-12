@@ -19,7 +19,7 @@ function rainWords(){
     ctxRain.fillStyle = gradient;
 	ctxRain.fillRect(0, 0, width, height);
 	ctxRain.fillStyle = "#000000";
-	ctxRain.font = "11pt san-serif";
+	ctxRain.font = "8pt san-serif";
 	position.map(function(y, index){
 		let text = words[Math.floor(Math.random() * words.length)];
 		let x = (index * 15) + 2;
@@ -32,7 +32,7 @@ function rainWords(){
 	})
 }
 
-setInterval(rainWords, 102);
+setInterval(rainWords, 180);
 
 //-------------------game-----------------------//
 const wordHiddenContainer = document.getElementById("wordHidden");
@@ -247,6 +247,7 @@ const inputWord = () => {
     inputAddWordBtn.innerText = "Aceptar";
     inputAddWordBtn.setAttribute("onclick", "hiddenAddWord()");
     document.body.appendChild(inputAddWordBtn);
+    mobileInput();
 }
 
 const addWordGame = () => {
@@ -301,7 +302,6 @@ const playGame = () => {
 }
 
 const home = () => {
-    //document.getElementById("exit").remove();
     if(wrongInput == false) {
         document.getElementById("result").remove();
         document.getElementById("accept").remove();
@@ -343,4 +343,15 @@ const hideBody = () => {
     document.getElementById("leftLeg").style.display = "none";
     document.getElementById("rightLeg").style.display = "none";
 
+}
+
+const mobileInput = () => {
+    const mobile = document.createElement("button");
+
+    mobile.type = "input"; 
+    mobile.setAttribute("id", "inputWord");
+    mobile.setAttribute("value", "");
+    mobile.setAttribute("autofocus", "");
+    mobile.setAttribute("placeholder", "Ingresa la palabra: ");
+    document.body.appendChild(mobile);
 }

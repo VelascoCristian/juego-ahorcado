@@ -404,7 +404,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 676px) {
+@media screen and (max-height: 602px) {
     #pressedLetters {
         top: 65.5%
     }
@@ -416,7 +416,7 @@ footer {
     }
 
     #downToHead {
-        left: 66%;
+        left: 63.7%;
     }
 
     #result {
