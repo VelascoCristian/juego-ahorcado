@@ -223,6 +223,12 @@ footer {
     cursor: pointer;
 }
 
+#inputMobile {
+    position: absolute;
+    left: 59%;
+    top: 5%;
+}
+
 /* Hanged */
 #mast {
     position: absolute;
@@ -331,7 +337,7 @@ footer {
 }
 
 /*Responsive */
-@media screen and (max-width: 1023px) {
+@media screen and (min-height: 1023px) {
     #pressedLetters {
         top: 63%
     }
@@ -404,7 +410,7 @@ footer {
     }
 }
 
-@media screen and (max-height: 602px) {
+@media screen and (min-height: 602px) {
     #pressedLetters {
         top: 65.5%
     }

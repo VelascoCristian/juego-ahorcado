@@ -349,7 +349,7 @@ const mobileInput = () => {
     const mobile = document.createElement("button");
 
     mobile.type = "input"; 
-    mobile.setAttribute("id", "inputWord");
+    mobile.setAttribute("id", "inputMobile");
     mobile.setAttribute("value", "");
     mobile.setAttribute("autofocus", "");
     mobile.setAttribute("placeholder", "Ingresa la palabra: ");
