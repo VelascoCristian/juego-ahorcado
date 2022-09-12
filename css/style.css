@@ -1,0 +1,474 @@
+body {
+    height: 100vh;
+}
+
+footer {
+    position: absolute;
+    top: 96.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(10, 56, 113, 1);
+    width: 100%;
+    height: 5vh;
+    text-align: center;
+    padding-top: 1%;
+    color: rgb(255, 255, 255);
+}
+
+#logo {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+#letterRain {
+    display: flex;
+    height: 100vh;
+}
+
+.playBtn {
+    position: absolute;
+    background: rgba(10, 56, 113, 1);
+    color: rgba(255, 255, 255, 1);
+    border: none;
+    border-radius: 2vh;
+    height: 12vh;
+    width: 32vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: initial;
+    font-size: 3.6vh;
+}
+
+.addWordBtn {
+    position: absolute;
+    margin-top: 8vh;
+    border: none;
+    border-radius: 2vh;
+    height: 7vh;
+    width: 30vh;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: initial;
+    font-size: 2vh;
+}
+
+.playBtn:hover{
+    background-color: rgb(255, 130, 0);
+    transition-duration: 0.25s;
+    color: bisque;
+}
+
+.addWordBtn:hover{
+    background-color: rgb(255, 130, 0);
+    transition-duration: 0.25s;
+    color: bisque;
+}
+
+#pressedLetters {
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 5vh;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 130, 0);
+}
+
+#dashes {
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 8.5vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(10, 56, 113, 1);
+}
+
+#result {
+    position: absolute;
+    height: 45%;
+    width: 45%;
+    font-family: sans-serif;
+    font-size: 7.5vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 1%;
+    padding-left: 3%;
+    border: none;
+    border-radius: 2vh;
+    background: rgba(10, 56, 113, 1);
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+}
+
+#theWordWas {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(10, 56, 113, 1);
+    color: rgb(255, 130, 0);
+    border: none;
+    height: 10%;
+    width: 45%;
+    font-size: 3.5vh;
+    text-align: center;
+}
+
+#accept {
+    position: absolute;
+    height: 7%;
+    width: 12%;
+    font-family: sans-serif;
+    font-size: 3vh;
+    top: 58%;
+    left: 43%;
+    border: none;
+    border-radius: 2vh;
+    color: rgba(10, 56, 113, 1);
+}
+
+#accept:hover{
+    background-color: rgb(255, 130, 0);
+    transition-duration: 0.25s;
+    transform:scale(1.20);
+    color: #EFEFEF;
+    cursor: pointer;
+}
+
+#exit {
+    position: absolute;
+    height: 7%;
+    width: 12%;
+    font-family: sans-serif;
+    font-size: 3vh;
+    top: 70%;
+    left: 43%;
+    border: none;
+    border-radius: 2vh;
+    background: rgba(10, 56, 113, 1);
+    color: #EFEFEF;
+}
+
+#exit:hover{
+    background-color: rgb(255, 130, 0);
+    transition-duration: 0.25s;
+    color: #EFEFEF;
+    cursor: pointer;
+}
+
+/* Add Word*/
+#inputWord {
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 7%;
+    width: 25%;
+    font-size: 2vh;
+    border: none;
+    border-radius: 2vh;
+    text-align: center;
+}
+
+#inputWordBtn {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 7%;
+    width: 12%;
+    font-size: 2vh;
+    border: none;
+    border-radius: 2vh;
+}
+
+#containerAdvice {
+    position: absolute;
+    margin-top: 8vh;
+    border: none;
+    border-radius: 2vh;
+    height: 45%;
+    width: 45%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(10, 56, 113, 1);
+    display: none;
+}
+
+#adviceAddWord {
+    position: absolute;
+    margin-top: 8vh;
+    border: none;
+    border-radius: 2vh;
+    height: 7vh;
+    width: 45vh;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: initial;
+    font-size: 2.2vh;
+    color: rgba(190, 192, 195, 0.9);
+}
+
+#inputWordBtn:hover {
+    background-color: rgb(255, 130, 0);
+    transition-duration: 0.25s;
+    color: #EFEFEF;
+    cursor: pointer;
+}
+
+/* Hanged */
+#mast {
+    position: absolute;
+    width: 1.5vh;
+    height: 30vh;
+    background: rgb(0, 0, 0);
+    left: 45%;
+    top: 5%;
+    display: none;
+}
+
+#floor {
+    position: absolute;
+    width: 15vh;
+    height: 1.5vh;
+    background: rgb(0, 0, 0);
+    left: 40%;
+    top: 35%;
+    display: none;
+}
+
+#upper {
+    position: absolute;
+    width: 13.1vh;
+    height: 1.5vh;
+    background: rgb(0, 0, 0);
+    left: 45%;
+    top: 5%;
+    display: none;
+}
+
+#downToHead {
+    position: absolute;
+    width: 1.5vh;
+    height: 2vh;
+    background: rgb(0, 0, 0);
+    left: 50.75%;
+    top: 6.25%;
+    display: none;
+}
+
+
+#face {
+    position: absolute;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    border: 0.7vh solid rgb(0, 0, 0);
+    left: 49.6%;
+    top: 8%;
+    display: none;
+}
+
+#body {
+    position: absolute;
+    width: 1vh;
+    height: 10vh;
+    background: rgb(0, 0, 0);
+    left: 51%;
+    top: 13.9%;
+    display: none;
+}
+
+#leftArm {
+    position: absolute;
+    width: 1vh;
+    height: 5.5vh;
+    background: rgb(0, 0, 0);
+    left: 50%;
+    top: 15%;
+    rotate: 45deg;
+    display: none;
+}
+
+#rightArm {
+    position: absolute;
+    width: 1vh;
+    height: 5.5vh;
+    background: rgb(0, 0, 0);
+    left: 52%;
+    top: 15%;
+    rotate: 135deg;
+    display: none;
+}
+
+#leftLeg {
+    position: absolute;
+    width: 1vh;
+    height: 5.5vh;
+    background: rgb(0, 0, 0);
+    left: 52%;
+    top: 22.5%;
+    rotate: 135deg;
+    display: none;
+}
+
+#rightLeg {
+    position: absolute;
+    width: 1vh;
+    height: 5.5vh;
+    background: rgb(0, 0, 0);
+    left: 50%;
+    top: 22.5%;
+    rotate: 45deg;
+    display: none;
+}
+
+/*Responsive */
+@media screen and (max-width: 1023px) {
+    #pressedLetters {
+        top: 63%
+    }
+
+    #downToHead {
+        left: 60.47%;
+    }
+
+    #floor {
+        left: 35%;
+    }
+
+    #exit {
+        width: 18%;
+        left: 50%;
+        top: 72%;
+        transform: translate(-50%, -50%);
+    }
+
+    #accept {
+        left: 42%;
+        width: 18%;
+    }
+
+    #result {
+        font-size: 3vh;
+        padding-right: 1%;
+    }
+    
+    #theWordWas {
+        font-size: 2.25vh;
+    }
+
+    #adviceAddWord {
+        left: 70%;
+        font-size: 1.55vh;
+    }
+
+    #inputWordBtn {
+        width: 18%;
+    }
+
+    #face {
+        left: 57%;
+    }
+
+    #body {
+        left: 60.75%;
+    }
+
+    #leftArm {
+        left: 58%;
+    }
+
+    #rightArm {
+        left: 63%;
+    }
+
+    #leftLeg {
+        left: 63%;
+    }
+
+    #rightLeg {
+        left: 58%;
+    }
+
+    footer {
+        top: 96.4%;
+        padding-top: 3%;
+    }
+}
+
+@media screen and (max-width: 676px) {
+    #pressedLetters {
+        top: 65.5%
+    }
+
+    #exit {
+        width: 21%;
+        left: 50%;
+        top: 76%;
+    }
+
+    #downToHead {
+        left: 66%;
+    }
+
+    #result {
+        font-size: 2.25vh;
+    }
+
+    #accept {
+        width: 21%;
+        left: 40%;
+    }
+
+    #theWordWas {
+        font-size: 1.85vh;
+    }
+
+    #inputWord {
+        width: 35%;
+    }
+
+    #adviceAddWord {
+        left: 52%;
+        font-size: 2vh;
+        width: 85%;
+    }
+
+    #face {
+        left: 61.75%;
+    }
+
+    #body {
+        left: 66.5%;
+    }
+
+    #leftArm {
+        left: 63%;
+    }
+
+    #rightArm {
+        left: 70%;
+    }
+
+    #leftLeg {
+        left: 70%;
+    }
+
+    #rightLeg {
+        left: 63%;
+    }
+
+    footer {
+        padding-top: 2.5%;
+        top: 96.8%
+    }
+
+}

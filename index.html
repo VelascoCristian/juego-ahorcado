@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css" >
+    <link rel="stylesheet" href="css/style.css" >
+    <script type="text/javascript" src="scripts/script.js" defer></script>
+    <title>Juego del ahorcado</title>
+</head>
+<body>
+    <main>
+        <img id="logo" src="images/logo.png" alt="Logo de alura">
+        <canvas id= "letterRain"></canvas>
+        <section class="containerMenu" id="containerMenu">
+            <label for="play"></label>
+            <input type="button" class="playBtn" id="playBtn" onclick ="playGame()" value="Iniciar juego" name="play">
+            <label for="addWord"></label>
+            <input type="button" class="addWordBtn" id="addWordBtn" onclick ="inputWord()" value="Agregar nueva palabra" name="addWord">
+            <div id="containerAdvice">
+                <div id="adviceAddWord">Máximo 8 letras: No se acepta números ni acentos</div>
+            </div>
+            <div id="pressedLetters"></div>
+            <div id="wordHidden"></div>
+            <div id="dashes"></div>
+            <div id="face" ></div>
+            <div id="body" ></div>
+            <div id="leftArm" ></div>
+            <div id="rightArm" ></div>
+            <div id="leftLeg" ></div>
+            <div id="rightLeg" ></div>
+            <div id="mast" ></div>
+            <div id="floor" ></div>
+            <div id="upper" ></div>
+            <div id="downToHead" ></div>
+        </section>
+    </main>
+    <footer>
+        &copy Cristian Velasco - 2022
+    </footer>
+</body>
+</html>
